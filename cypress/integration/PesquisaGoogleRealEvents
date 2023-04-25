@@ -1,0 +1,30 @@
+/// <reference types="cypress"/>
+
+describe("Testar o Site Google", () => {
+
+    it('Acessar o Site Google', () => {
+
+        cy.visit('https://www.google.com/')
+    })
+
+    it('Verificar se os botões de Pesquisa e Sorte estão aparecendo', () => {
+
+        cy.get('.FPdoLc > center > .gNO89b')
+            .should('be.visible')
+        cy.get('.FPdoLc > center > .RNmpXc')
+            .should('be.visible')
+    })
+
+    /*it('Escrever no campo de Pesquisa do Google', () => {
+
+        cy.get('#APjFqb')
+            .type('Cypress')
+        cy.get('#APjFqb')
+            .should('have.value','Cypress')
+        cy.get('.FPdoLc > center > .RNmpXc')
+            .click
+    })*/
+    
+
+})
+
